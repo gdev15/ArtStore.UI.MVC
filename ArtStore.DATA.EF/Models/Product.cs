@@ -19,7 +19,7 @@ namespace ArtStore.DATA.EF.Models
         public string? ProductImage { get; set; }
         public int? FileTypeId { get; set; }
 
-        public virtual Category Category { get; set; } = null!;
+        public virtual Category? Category { get; set; } = null!;
         public virtual FileType? FileType { get; set; }
         public virtual ICollection<OrderProduct> OrderProducts { get; set; }
     }
