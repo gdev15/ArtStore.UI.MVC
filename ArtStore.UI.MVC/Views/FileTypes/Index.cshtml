@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ArtStore.DATA.EF.Models.FileType>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FileTypeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileExtension)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileTypeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileExtension)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileDescription)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FileTypeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.FileTypeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.FileTypeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

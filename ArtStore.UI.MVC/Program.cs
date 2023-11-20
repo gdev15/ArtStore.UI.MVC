@@ -1,7 +1,7 @@
 using ArtStore.UI.MVC.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-//using ArtStore.DATA.EF.Models;
+using ArtStore.DATA.EF.Models;
 
 namespace ArtStore.UI.MVC
 {
@@ -18,7 +18,7 @@ namespace ArtStore.UI.MVC
 			builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 			//Added service
-			//builder.Services.AddDbContext<ArtStoreContext>(options => options.UseSqlServer(connectionString));
+			builder.Services.AddDbContext<ArtStoreContext>(options => options.UseSqlServer(connectionString));
 
 
 			//Added for Manager services
