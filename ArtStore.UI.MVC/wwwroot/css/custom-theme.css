@@ -1,0 +1,5 @@
+﻿body > div > main > div {
+
+    background-color: white;
+    margin-left: 0 !important; /* Add this line to remove the left margin */
+}

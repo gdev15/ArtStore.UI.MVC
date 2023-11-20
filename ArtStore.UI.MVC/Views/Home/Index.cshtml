@@ -1,8 +1,144 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Start Hero Section -->
+<section>
+	<div class="hero my-5 p-5">
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-lg-5">
+					<div class="intro-excerpt">
+						<h1>Graphics, <span clsas="d-block">Art, and Photos</span></h1>
+						<p class="mb-4">Welcome to Art Shop, your premier destination for a world of visual inspiration. Our company is dedicated to bringing the beauty of art, the allure of photography, and the power of graphics into your life.</p>
+						<p><a href="@Url.Action("Index","Products")" class="btn btn-secondary me-2">Shop Now</a><a href="@Url.Action("TiledProducts","Products")" class="btn btn-white-outline">Explore</a></p>
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<div class="p-5">
+						<img src="~/img/hedgehog.png" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Hero Section -->
+<!-- Start Product Section -->
+<div class="product-section">
+	<div class="container">
+		<div class="row">
+
+			<!-- Start Column 1 -->
+			<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
+				<h2 class="mb-4 section-title">Discover Stunning Art Assets</h2>
+				<p class="mb-4">Explore our curated collection of high-quality JPGs, PNGs, and vector graphics. Find the perfect assets for your creative projects.</p>
+				<p><a href="@Url.Action("TiledProducts","Products")" class="btn">Browse Images</a></p>
+			</div>
+			<!-- End Column 1 -->
+			<!-- Start Column 2 -->
+			<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+				<a class="product-item" href="@Url.Action("TiledProducts","Products")">
+					<img src="~/artimages/elephant.jpg" class="img-fluid product-thumbnail">
+					<h3 class="product-title">High Resolution JPG</h3>
+					<strong class="product-price"></strong>
+
+					<span class="icon-cross">
+						<img src="~/artimages/elephant.jpg" class="img-fluid">
+					</span>
+				</a>
+			</div>
+			<!-- End Column 2 -->
+			<!-- Start Column 4 -->
+			<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+				<a class="product-item" href="@Url.Action("TiledProducts","ArtAssets")">
+					<img src="~/artimages/sports-car.svg" class="img-fluid product-thumbnail">
+					<h3 class="product-title">Vector Art</h3>
+					<strong class="product-price"></strong>
+
+					<span class="icon-cross">
+						<img src="~/artimages/sports-car.svg" class="img-fluid">
+					</span>
+				</a>
+			</div>
+			<!-- End Column 4 -->
+			<!-- Start Column 3 -->
+			<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+				<a class="product-item" href="@Url.Action("TiledProducts","ArtAssets")">
+					<img src="~/artimages/sakura.png" class="img-fluid product-thumbnail">
+					<h3 class="product-title">Anime Art</h3>
+					<strong class="product-price"></strong>
+
+					<span class="icon-cross">
+						<img src="~/artimages/sakura.png" class="img-fluid">
+					</span>
+				</a>
+			</div>
+			<!-- End Column 3 -->
+
+		</div>
+	</div>
 </div>
+<!-- End Product Section -->
+<!-- Start Why Choose Us Section -->
+<section class="my-5">
+	<div class="why-choose-section">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-6">
+					<h2 class="section-title">Why Choose Us</h2>
+					<p>At [Your Website Name], we are passionate about providing top-quality digital art assets to fuel your creative projects. Here's why you should choose us:</p>
+
+					<div class="row my-5">
+						<div class="col-6 col-md-6">
+							<div class="feature">
+								<div class="icon">
+									<img src="~/img/easel.svg" alt="Image" class="img-fluid">
+								</div>
+								<h3>Diverse Selection</h3>
+								<p>Explore our extensive collection of digital art assets, including stunning JPGs, PNGs, and vector graphics.</p>
+							</div>
+						</div>
+
+						<div class="col-6 col-md-6">
+							<div class="feature">
+								<div class="icon">
+									<img src="~/img/rocket.svg" alt="Image" class="img-fluid">
+								</div>
+								<h3>Instant Download</h3>
+								<p>Get immediate access to your chosen art assets with our seamless instant download process.</p>
+							</div>
+						</div>
+
+						<div class="col-6 col-md-6">
+							<div class="feature">
+								<div class="icon">
+									<img src="~/img/support.svg" alt="Image" class="img-fluid">
+								</div>
+								<h3>24/7 Support</h3>
+								<p>We're here to assist you around the clock, ensuring a smooth experience for all your creative needs.</p>
+							</div>
+						</div>
+
+						<div class="col-6 col-md-6">
+							<div class="feature">
+								<div class="icon">
+									<img src="~/img/paint-pallete.svg" alt="Image" class="img-fluid">
+								</div>
+								<h3>Quality Art Assets</h3>
+								<p>Our art assets are crafted by talented artists to ensure the highest quality for your projects.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-5">
+					<div class="img-wrap">
+						<img src="~/artimages/fighter.svg" alt="Image" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Why Choose Us Section -->
