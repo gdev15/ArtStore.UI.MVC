@@ -1,7 +1,7 @@
 using ArtStore.UI.MVC.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using ArtStore.UI.MVC;
+//using ArtStore.DATA.EF.Models;
 
 namespace ArtStore.UI.MVC
 {
