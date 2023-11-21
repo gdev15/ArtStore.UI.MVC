@@ -1,0 +1,64 @@
+﻿@model ArtStore.Models.ContactViewModel
+
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<!-- Header -->
+<section class="bg-light">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2 class="text-center p-5">
+                Art Shop <span>- @ViewBag.Title</span>
+            </h2>
+        </div>
+    </div>
+</section>
+<!-- End Header-->
+<!-- Contact Start -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 mx-auto">
+                <form asp-action="Contact">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group text-light col-12">
+                        <label asp-for="Name" class="control-label mb-2"></label>
+                        <input asp-for="Name" class="form-control mb-4" id="name" placeholder="Enter Name" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group text-light col-12">
+                        <label asp-for="Email" class="control-label mb-2"></label>
+                        <input asp-for="Email" class="form-control mb-4" id="email" placeholder="Enter Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group text-light col-12">
+                        <label asp-for="Subject" class="control-label mb-2"></label>
+                        <input asp-for="Subject" class="form-control mb-4" id="subject" placeholder="Enter Subject" />
+                        <span asp-validation-for="Subject" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group text-light col-12">
+                        <label asp-for="Message" class="control-label mb-2"></label>
+                        <textarea asp-for="Message" class="form-control mb-4" id="message" placeholder="Enter Message"></textarea>
+                        <span asp-validation-for="Message" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit" class="my-5 btn btn-secondary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+</section> <!--End contact-->
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

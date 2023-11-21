@@ -71,7 +71,7 @@ namespace ArtStore.UI.MVC.Controllers
             }
 
             //paged list:
-            int pageSize = 6;
+            int pageSize = 8;
 
             #endregion
 

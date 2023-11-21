@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Email Confirmation";
+}
+@* Model declaration - This view expects info that fits the ContactViewModel.
+   When referring to the model ITSELF, we use a lower case m in the word "model".
+*@
+@model ArtStore.Models.ContactViewModel
+<!-- ======= Main ======= -->
+<main id="main">
+    <section>
+        <div class="container my-5 p-5" id="journey">
+
+            <div class="container my-5 justify-content-center">
+                <div class="row g-5 text-center">
+                    <h1 class="text-success">Email Confirmation</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= Confirmation Section ======= -->
+    <section class="contact " data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+        <div class="container p-5">
+
+            <div class="row">
+                <div class="my-0 justify-content-center bg-white p-5">
+                    @* When referring to a SPECIFIC OBJECT that fits the model (like the
+                    cvm object that was passed to this View), use a capital M -- "Model"
+                    *@
+                    <div class="info-box text-light text-center">
+                        <i class="bx bx-check-circle"></i>
+                        <h3 class="text-dark mb-5">Message Sent!</h3>
+                        <p class="text-dark mb-5">
+                            Thank you for contacting! I will respond to
+                            your message using the provided email address,<strong class="text-success"> @Model.Email</strong>, in
+                            the next 1-3 business days.
+                        </p>
+                        <br />
+                        <div class="oinfo-box  text-center">
+                            <p class="text-dark mb-5">
+                                You sent the following message on
+                                @DateTime.Now.Date.ToShortDateString() at
+                                @DateTime.Now.ToShortTimeString() :
+                            </p>
+                        </div>
+                        <br />
+                        <div class="info-box text-light text-center">
+                            <p>
+                                <em>@Model.Message</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Confirmation Section -->
+
+</main><!-- End #main -->

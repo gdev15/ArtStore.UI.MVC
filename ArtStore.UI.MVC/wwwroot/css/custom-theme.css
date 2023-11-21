@@ -1,5 +1,47 @@
 ﻿body > div > main > div {
 
     background-color: white;
-    margin-left: 0 !important; /* Add this line to remove the left margin */
+    margin-left: 0 !important; 
+}
+
+.links-wrap ul {
+    display: flex;
+    justify-content: space-evenly; 
+    list-style: none; 
+    padding: 0; 
+}
+
+
+.icon-feature img{
+    width: 50px !important;
+
+}
+
+body > div > main > section.my-5 > div > div > div > div.col-lg-6 {
+    background-color: rgb(244,150,4,.5);
+    border-radius: 6px 6px;
+}
+
+.border-one {
+    border-top: 48px inset #ff6d00;
+    border-right: 48px inset #ff6d00;
+}
+
+.border-two {
+    border-top: 48px inset #808080;
+    border-right: 48px inset #808080;
+}
+
+.border-three {
+    border: 48px inset #ffffff;
+   
+
+}
+
+body > header {
+    background-color: rgb(244,150,4,.5) !important;
+}
+
+.cart-thumbnail {
+    width: 50px !important;
 }

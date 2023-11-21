@@ -1,0 +1,83 @@
+﻿@model Dictionary<int, ArtStore.UI.MVC.Models.CartItemViewModel>
+
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<section class="product_section layout_padding">
+    <div class="container">
+        <div class="heading_center heading_container">
+
+            <h2>Your <span>Cart</span></h2>
+            <p align="center">
+                <a asp-action="TiledProducts" asp-controller="Products" class="btn btn-info">
+                    Back to Shopping
+                </a>
+            </p>
+        </div>
+        @if (!Model.Any())
+        {
+            <p class="alert alert-warning text-center">
+                @ViewBag.Message
+            </p>
+        }
+        else
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Product</th>               
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Values)
+                    {
+                        <tr>
+                            <td>
+                                <img src="~/artimages/@item.Product.ProductImage" class="cart-thumbnail img-fluid rounded-2">
+                            </td>
+                       
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Product.ProductName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Product.ProductPrice)
+                            </td>
+                            <td>
+                                @($"{item.Qty * item.Product.ProductPrice:c}")
+                            </td>
+                            <td>
+                                @* <a href="#" class="btn btn-danger">Remove From Cart</a> *@
+                                <a asp-action="RemoveFromCart" asp-route-id="@item.Product.ProductId" class="btn btn-danger">
+                                    Remove From Cart
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="alert alert-success text-center">
+                <p>Your total before taxes and shipping is @($"{Model.Values.Sum(item => item.Qty * item.Product.ProductPrice):c}")</p>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <p>
+                        <a asp-action="SubmitOrder" class="btn btn-primary">Submit Order</a>
+                    </p>
+                    <p>
+                        <a asp-action="Checkout" class="btn btn-secondary">Checkout</a>
+                    </p>
+
+                }
+                else
+                {
+                    <p>Please login to place this order.</p>
+                }
+            </div>
+        }
+    </div>
+</section>

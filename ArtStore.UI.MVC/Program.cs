@@ -26,7 +26,15 @@ namespace ArtStore.UI.MVC
 
 			builder.Services.AddControllersWithViews();
 
-			var app = builder.Build();
+			//Add for cart session
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(20);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+            var app = builder.Build();
 
 			// Configure the HTTP request pipeline.
 			if (app.Environment.IsDevelopment())
@@ -45,7 +53,10 @@ namespace ArtStore.UI.MVC
 
 			app.UseRouting();
 
-			app.UseAuthentication();
+            //Add for cart session
+            app.UseSession();
+
+            app.UseAuthentication();
 			app.UseAuthorization();
 
 			app.MapControllerRoute(

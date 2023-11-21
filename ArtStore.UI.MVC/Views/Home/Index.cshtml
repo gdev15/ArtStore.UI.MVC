@@ -4,11 +4,11 @@
 
 <!-- Start Hero Section -->
 <section>
-	<div class="hero my-5 p-5">
+	<div class="hero my-5 ">
 		<div class="container">
-			<div class="row justify-content-between align-items-center">
+			<div class="row justify-content-between align-items-center bg-light p-5 rounded border-one">
 				<div class="col-lg-5">
-					<div class="intro-excerpt">
+					<div class="intro-excerpt bg-dark p-5 rounded-2">
 						<h1>Graphics, <span clsas="d-block">Art, and Photos</span></h1>
 						<p class="mb-4">Welcome to Art Shop, your premier destination for a world of visual inspiration. Our company is dedicated to bringing the beauty of art, the allure of photography, and the power of graphics into your life.</p>
 						<p><a href="@Url.Action("Index","Products")" class="btn btn-secondary me-2">Shop Now</a><a href="@Url.Action("TiledProducts","Products")" class="btn btn-white-outline">Explore</a></p>
@@ -16,7 +16,7 @@
 				</div>
 				<div class="col-lg-7">
 					<div class="p-5">
-						<img src="~/img/hedgehog.png" class="img-fluid">
+						<img src="~/img/hedgehog.png" class="img-fluid rounded-2" alt="Sonic the Hedgehog">
 					</div>
 				</div>
 			</div>
@@ -27,7 +27,7 @@
 <!-- Start Product Section -->
 <div class="product-section">
 	<div class="container">
-		<div class="row">
+		<div class="row rounded row justify-content-between align-items-center p-5 border-three">
 
 			<!-- Start Column 1 -->
 			<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
@@ -39,7 +39,7 @@
 			<!-- Start Column 2 -->
 			<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 				<a class="product-item" href="@Url.Action("TiledProducts","Products")">
-					<img src="~/artimages/elephant.jpg" class="img-fluid product-thumbnail">
+					<img src="~/artimages/elephant.jpg" class="img-fluid product-thumbnail" alt="Elephant">
 					<h3 class="product-title">High Resolution JPG</h3>
 					<strong class="product-price"></strong>
 
@@ -52,7 +52,7 @@
 			<!-- Start Column 4 -->
 			<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 				<a class="product-item" href="@Url.Action("TiledProducts","ArtAssets")">
-					<img src="~/artimages/sports-car.svg" class="img-fluid product-thumbnail">
+					<img src="~/artimages/sports-car.svg" class="img-fluid product-thumbnail" alt="sport car vector art">
 					<h3 class="product-title">Vector Art</h3>
 					<strong class="product-price"></strong>
 
@@ -70,7 +70,7 @@
 					<strong class="product-price"></strong>
 
 					<span class="icon-cross">
-						<img src="~/artimages/sakura.png" class="img-fluid">
+						<img src="~/artimages/sakura.png" class="img-fluid" alt="anime character">
 					</span>
 				</a>
 			</div>
@@ -82,51 +82,51 @@
 <!-- End Product Section -->
 <!-- Start Why Choose Us Section -->
 <section class="my-5">
-	<div class="why-choose-section">
+	<div class="hero my-5">
 		<div class="container">
-			<div class="row justify-content-between">
+			<div class="row justify-content-between bg-light p-5 rounded border-two">
 				<div class="col-lg-6">
 					<h2 class="section-title">Why Choose Us</h2>
-					<p>At [Your Website Name], we are passionate about providing top-quality digital art assets to fuel your creative projects. Here's why you should choose us:</p>
+					<p class="text-dark">At ArtShop, we are passionate about providing top-quality digital art assets to fuel your creative projects. Here's why you should choose us:</p>
 
 					<div class="row my-5">
 						<div class="col-6 col-md-6">
 							<div class="feature">
-								<div class="icon">
+								<div class="icon-feature">
 									<img src="~/img/easel.svg" alt="Image" class="img-fluid">
 								</div>
-								<h3>Diverse Selection</h3>
-								<p>Explore our extensive collection of digital art assets, including stunning JPGs, PNGs, and vector graphics.</p>
+								<h3 class="fw-bold my-2">Diverse Selection</h3>
+								<p class="text-dark">Explore our extensive collection of digital art assets, including stunning JPGs, PNGs, and vector graphics.</p>
 							</div>
 						</div>
 
 						<div class="col-6 col-md-6">
 							<div class="feature">
-								<div class="icon">
+								<div class="icon-feature">
 									<img src="~/img/rocket.svg" alt="Image" class="img-fluid">
 								</div>
-								<h3>Instant Download</h3>
-								<p>Get immediate access to your chosen art assets with our seamless instant download process.</p>
+								<h3 class="fw-bold my-2">Instant Download</h3>
+								<p class="text-dark">Get immediate access to your chosen art assets with our seamless instant download process.</p>
 							</div>
 						</div>
 
 						<div class="col-6 col-md-6">
 							<div class="feature">
-								<div class="icon">
+								<div class="icon-feature">
 									<img src="~/img/support.svg" alt="Image" class="img-fluid">
 								</div>
-								<h3>24/7 Support</h3>
-								<p>We're here to assist you around the clock, ensuring a smooth experience for all your creative needs.</p>
+								<h3 class="fw-bold my-2">24/7 Support</h3>
+								<p class="text-dark">We're here to assist you around the clock, ensuring a smooth experience for all your creative needs.</p>
 							</div>
 						</div>
 
 						<div class="col-6 col-md-6">
 							<div class="feature">
-								<div class="icon">
+								<div class="icon-feature">
 									<img src="~/img/paint-pallete.svg" alt="Image" class="img-fluid">
 								</div>
-								<h3>Quality Art Assets</h3>
-								<p>Our art assets are crafted by talented artists to ensure the highest quality for your projects.</p>
+								<h3 class="fw-bold my-2">Quality Art Assets</h3>
+								<p class="text-dark">Our art assets are crafted by talented artists to ensure the highest quality for your projects.</p>
 							</div>
 						</div>
 					</div>
